@@ -1,0 +1,16 @@
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/tarea03.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/anpi.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/test/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/test/CMakeFiles/tester.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/benchmarks/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/benchmarks/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/benchmarks/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/benchmarks/CMakeFiles/benchmark.dir
