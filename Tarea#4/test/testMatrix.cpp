@@ -9,16 +9,15 @@
 #include <boost/test/unit_test.hpp>
 
 #include <iostream>
+#include <complex>
 #include <exception>
 #include <cstdlib>
-#include <complex>
 
 /**
  * Unit tests for the matrix class
  */
 
 #include "Matrix.hpp"
-#include "Allocator.hpp"
 
 // Explicit instantiation of all methods of Matrix
 
@@ -92,188 +91,210 @@ typedef anpi::Matrix<int     ,aralloc> arimatrix;
 
 BOOST_AUTO_TEST_SUITE( Matrix )
 
-template<class M>
-void testConstructors() {
-  // Constructors
-  { // default
-    M a;
-    BOOST_CHECK( a.rows() == 0);
-    BOOST_CHECK( a.cols() == 0);
-    BOOST_CHECK( a.dcols() == 0);
-  }
-  { // unitilialized
-    M a(2,3,anpi::DoNotInitialize);
-    BOOST_CHECK( a.rows() == 2);
-    BOOST_CHECK( a.cols() == 3);
-    BOOST_CHECK( a.dcols() >= 3);
-  }
-  { // default initialized
-    M a(3,2);
-    BOOST_CHECK( a.rows() == 3);
-    BOOST_CHECK( a.cols() == 2);
-    BOOST_CHECK( a(0,0) == typename M::value_type(0));
-  }
-  { // default initialized
-    M a(3,2,typename M::value_type(4));
-    BOOST_CHECK( a.rows() == 3);
-    BOOST_CHECK( a.cols() == 2);
-    BOOST_CHECK( a(0,0) == typename M::value_type(4));
-  }
-  { // initializer_list
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    BOOST_CHECK( a.rows() == 3);
-    BOOST_CHECK( a.cols() == 5);
-    
-    BOOST_CHECK( a(0,0) == typename M::value_type(1));
-    BOOST_CHECK( a(1,2) == typename M::value_type(8));
-    BOOST_CHECK( a(2,3) == typename M::value_type(14));
-  }
-  { // Copy constructor
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    M b(a);
+    template<class M>
+    void testConstructors() {
+        // Constructors
+        { // default
+            M a;
+            BOOST_CHECK( a.rows() == 0);
+            BOOST_CHECK( a.cols() == 0);
+            BOOST_CHECK( a.dcols() == 0);
+        }
+        { // unitilialized
+            M a(2,3,anpi::DoNotInitialize);
+            BOOST_CHECK( a.rows() == 2);
+            BOOST_CHECK( a.cols() == 3);
+            BOOST_CHECK( a.dcols() >= 3);
+        }
+        { // default initialized
+            M a(3,2);
+            BOOST_CHECK( a.rows() == 3);
+            BOOST_CHECK( a.cols() == 2);
+            BOOST_CHECK( a(0,0) == typename M::value_type(0));
+        }
+        { // default initialized
+            M a(3,2,typename M::value_type(4));
+            BOOST_CHECK( a.rows() == 3);
+            BOOST_CHECK( a.cols() == 2);
+            BOOST_CHECK( a(0,0) == typename M::value_type(4));
+        }
+        { // initializer_list
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            BOOST_CHECK( a.rows() == 3);
+            BOOST_CHECK( a.cols() == 5);
 
-    BOOST_CHECK( a==b );
-    BOOST_CHECK( b.rows() == 3 );
-    BOOST_CHECK( b.cols() == 5 );
-    BOOST_CHECK( b.data() != a.data());
-  }
+            BOOST_CHECK( a(0,0) == typename M::value_type(1));
+            BOOST_CHECK( a(1,2) == typename M::value_type(8));
+            BOOST_CHECK( a(2,3) == typename M::value_type(14));
+        }
+        { // Copy constructor
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            M b(a);
 
-  { // Move constructor
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    M b(std::move(a));
+            BOOST_CHECK( a==b );
+            BOOST_CHECK( b.rows() == 3 );
+            BOOST_CHECK( b.cols() == 5 );
+            BOOST_CHECK( b.data() != a.data());
+        }
 
-    BOOST_CHECK( b.rows() == 3 );
-    BOOST_CHECK( b.cols() == 5 );
+        { // Move constructor
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            M b(std::move(a));
 
-    BOOST_CHECK( a.empty() );
-  }
-  { // Mem constructor
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    M b(a.rows(),a.cols(),a.data());
+            BOOST_CHECK( b.rows() == 3 );
+            BOOST_CHECK( b.cols() == 5 );
 
-    BOOST_CHECK( a==b );
-    BOOST_CHECK( b.rows() == 3 );
-    BOOST_CHECK( b.cols() == 5 );
-    BOOST_CHECK( b.data() != a.data() );
-  }
-}
+            BOOST_CHECK( a.empty() );
+        }
+        { // Mem constructor
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            M b(a.rows(),a.cols(),a.data());
+
+            BOOST_CHECK( a==b );
+            BOOST_CHECK( b.rows() == 3 );
+            BOOST_CHECK( b.cols() == 5 );
+            BOOST_CHECK( b.data() != a.data() );
+        }
+    }
 
 
 /**
  * Instantiate and test the methods of the Matrix class
  */
-BOOST_AUTO_TEST_CASE( Constructors ) {
-  dispatchTest(testConstructors);
-}
+    BOOST_AUTO_TEST_CASE( Constructors ) {
+        dispatchTest(testConstructors);
+    }
 
-template<class M>
-void testComparison() {
-  // == and !=
-  M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-  M b = { {1,2,3,4,5},{6,7,9,9,10},{11,12,13,14,15} };
+    template<class M>
+    void testComparison() {
+        // == and !=
+        M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+        M b = { {1,2,3,4,5},{6,7,9,9,10},{11,12,13,14,15} };
 
-  BOOST_CHECK( (a!=b) );
-  
-  b(1,2)=typename M::value_type(8);
-  
-  BOOST_CHECK( (a==b) );
-}  
+        BOOST_CHECK( (a!=b) );
 
-BOOST_AUTO_TEST_CASE(Comparison) 
-{
-  dispatchTest(testComparison);
-}
+        b(1,2)=typename M::value_type(8);
 
-template<class M>
-void testAssignment() {
-  { // Move assignment
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    M c(a);
-    M b;
-    b=std::move(a);
-    BOOST_CHECK(a.empty() );
-    BOOST_CHECK(!b.empty() );
-    BOOST_CHECK(b.rows()==3 );
-    BOOST_CHECK(b.cols()==5 );
-    BOOST_CHECK(b==c );
-  }
-  { // assignment
-    M a = { {1,2,3,4,5},{5,6,7,8,9},{9,10,11,12,13} };
-    M b;
-    b=a;
-    BOOST_CHECK(a==b );
-  }  
-  { // swap
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    M b = { {13,14},{15,16} };
+        BOOST_CHECK( (a==b) );
+    }
 
-    M c(a);
-    M d(b);
+    BOOST_AUTO_TEST_CASE(Comparison)
+    {
+        dispatchTest(testComparison);
+    }
 
-    BOOST_CHECK( a==c );
-    BOOST_CHECK( d==b );
-    
-    c.swap(d);
-    BOOST_CHECK( a==d );
-    BOOST_CHECK( b==c );
-  }
-  { // column
-    M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
-    std::vector<typename M::value_type> col = a.column(1);
-    std::vector<typename M::value_type> ref = {2,7,12};
-    BOOST_CHECK( col == ref );
-  }
-}
+    template<class M>
+    void testAssignment() {
+        { // Move assignment
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            M c(a);
+            M b;
+            b=std::move(a);
+            BOOST_CHECK(a.empty() );
+            BOOST_CHECK(!b.empty() );
+            BOOST_CHECK(b.rows()==3 );
+            BOOST_CHECK(b.cols()==5 );
+            BOOST_CHECK(b==c );
+        }
+        { // assignment
+            M a = { {1,2,3,4,5},{5,6,7,8,9},{9,10,11,12,13} };
+            M b;
+            b=a;
+            BOOST_CHECK(a==b );
+        }
+        { // swap
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            M b = { {13,14},{15,16} };
 
-BOOST_AUTO_TEST_CASE(Assignment)
-{
-  dispatchTest(testAssignment);
-}
+            M c(a);
+            M d(b);
 
-template<class M>
-void testArithmetic() {
-  
-  {
-    M a = { {1,2,3},{ 4, 5, 6} };
-    M b = { {7,8,9},{10,11,12} };
-    M r = { {8,10,12},{14,16,18} };
-    
-    M c(a);
-    c+=b;
-    BOOST_CHECK(c==r );
-    c=a+b;
-    BOOST_CHECK(c==r );
+            BOOST_CHECK( a==c );
+            BOOST_CHECK( d==b );
 
+            c.swap(d);
+            BOOST_CHECK( a==d );
+            BOOST_CHECK( b==c );
+        }
+        { // column
+            M a = { {1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15} };
+            std::vector<typename M::value_type> col = a.column(1);
+            std::vector<typename M::value_type> ref = {2,7,12};
+            BOOST_CHECK( col == ref );
+        }
+    }
 
-    c=M{ {1,2,3},{ 4, 5, 6} } + b;
-    BOOST_CHECK(c==r );
+    BOOST_AUTO_TEST_CASE(Assignment)
+    {
+        dispatchTest(testAssignment);
+    }
 
-    c=a+M{ {7,8,9},{10,11,12} };
-    BOOST_CHECK(c==r );
-  }
+    template<class M>
+    void testArithmetic() {
 
-  {
-    M a = { {1,2,3},{ 4, 5, 6} };
-    M b = { {7,8,9},{10,11,12} };
-    M r = { {-6,-6,-6},{-6,-6,-6} };
-    
-    M c(a);
-    c-=b;
-    BOOST_CHECK( c==r );
-    c=a-b;
-    BOOST_CHECK( c==r );
+        {
+            M a = { {1,2,3},{ 4, 5, 6} };
+            M b = { {7,8,9},{10,11,12} };
+            M r = { {8,10,12},{14,16,18} };
+
+            M c(a);
+            c+=b;
+            BOOST_CHECK(c==r );
+            c=a+b;
+            BOOST_CHECK(c==r );
 
 
-    c=M{ {1,2,3},{ 4, 5, 6} } - b;
-    BOOST_CHECK( c==r );
+            c=M{ {1,2,3},{ 4, 5, 6} } + b;
+            BOOST_CHECK(c==r );
 
-    c=a-M{ {7,8,9},{10,11,12} };
-    BOOST_CHECK( c==r );
-  } 
-}
+            c=a+M{ {7,8,9},{10,11,12} };
+            BOOST_CHECK(c==r );
+        }
 
-BOOST_AUTO_TEST_CASE(Arithmetic) {
-  dispatchTest(testArithmetic);  
-}
-  
+        {
+            M a = { {1,2,3},{ 4, 5, 6} };
+            M b = { {7,8,9},{10,11,12} };
+            M r = { {-6,-6,-6},{-6,-6,-6} };
+
+            M c(a);
+            c-=b;
+            BOOST_CHECK( c==r );
+            c=a-b;
+            BOOST_CHECK( c==r );
+
+
+            c=M{ {1,2,3},{ 4, 5, 6} } - b;
+            BOOST_CHECK( c==r );
+
+            c=a-M{ {7,8,9},{10,11,12} };
+            BOOST_CHECK( c==r );
+
+        }
+
+        {
+            anpi::Matrix<int> a = {{1,2,3},{1,2,3},{1,2,3}};
+            anpi::Matrix<int> b = {{1,2},{1,2},{1,2}};
+            anpi::Matrix<int> r1 = {{6,12},{6,12},{6,12}};
+            std::vector<int> v = {1,2,3};
+
+
+
+            anpi::Matrix<int> c = a * b;
+            BOOST_CHECK( c == r1);
+
+            anpi::Matrix<int> d;
+            BOOST_CHECK_THROW( b * r1 , anpi::Exception);
+
+            std::vector<int> vr = {14,14,14};
+            std::vector<int> v_av = a * v;
+            BOOST_CHECK(vr==v_av);
+
+
+        }
+    }
+
+    BOOST_AUTO_TEST_CASE(Arithmetic) {
+        dispatchTest(testArithmetic);
+    }
+
 BOOST_AUTO_TEST_SUITE_END()

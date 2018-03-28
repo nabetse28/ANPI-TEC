@@ -42,13 +42,18 @@ int main() {
 
 
 
-    anpi::Matrix<float> D;
+
+    anpi::Matrix<int> D;
+
 
     vector2 = A * vector1;
 
 
+    anpi::Matrix<int> b = {{1,2},{1,2},{1,2}};
+    anpi::Matrix<int> r1 = {{6,12},{6,12},{6,12}};
 
 
+    D = b * r1;
     //D = B * C;
 
 

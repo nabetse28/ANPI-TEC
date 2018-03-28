@@ -29,14 +29,45 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="397">
+              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Matrix.tpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/Matrix.tpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="879">
+              <caret line="485" column="10" lean-forward="false" selection-start-line="485" selection-start-column="10" selection-end-line="485" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testMatrix.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/testMatrix.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+              <folding>
+                <element signature="e#170#205#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/include/Matrix.tpp" />
+        <option value="$PROJECT_DIR$/test/testMatrix.cpp" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -45,10 +76,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="445" />
-    <option name="y" value="8" />
     <option name="width" value="937" />
-    <option name="height" value="1072" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -75,7 +104,17 @@
             <path>
               <item name="tarea03" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Tarea#4" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tarea03" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Tarea#4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tarea03" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Tarea#4" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -86,6 +125,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tarea#3" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -99,7 +139,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.tarea03">
+  <component name="RunManager" selected="Boost.Test.Arithmetic">
+    <configuration name="Arithmetic" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tarea03" TARGET_NAME="tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tarea03" RUN_TARGET_NAME="tester" TEST_CLASS="Matrix" TEST_METHOD="Arithmetic" TEST_MODE="SUITE_TEST">
+      <envs />
+    </configuration>
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tarea03" RUN_TARGET_NAME="tarea03" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
@@ -115,13 +158,19 @@
     <configuration name="tester" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tarea03" TARGET_NAME="tester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tarea03" RUN_TARGET_NAME="tester">
       <envs />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.benchmark" />
       <item index="2" class="java.lang.String" itemvalue="Application.anpi" />
       <item index="3" class="java.lang.String" itemvalue="Application.tarea03" />
       <item index="4" class="java.lang.String" itemvalue="Application.tester" />
+      <item index="5" class="java.lang.String" itemvalue="Boost.Test.Arithmetic" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Boost.Test.Arithmetic" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -136,12 +185,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522217476636</updated>
-      <workItem from="1522217477738" duration="49000" />
+      <workItem from="1522217477738" duration="5309000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Arithmetic - 2018.03.28 at 00h 59m 50s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 01m 57s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 03m 27s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 09m 25s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 29m 10s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 29m 50s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 31m 37s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 33m 02s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 34m 19s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Arithmetic - 2018.03.28 at 01h 35m 32s.xml">
+      <configuration name="Arithmetic" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49000" />
+    <option name="totallyTimeSpent" value="5309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1080" extended-state="6" />
@@ -178,10 +259,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/include/Matrix.tpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="485" column="10" lean-forward="false" selection-start-line="485" selection-start-column="10" selection-end-line="485" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testMatrix.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <element signature="e#170#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="397">
+          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -435,11 +435,11 @@ namespace anpi
         Matrix<T,Alloc> c;
 
 
-        assert((a.cols()==b.rows()));
+        //assert((a.cols()==b.rows()));
 
         T const a_row_size = a.rows();
         T const a_col_size = a.cols();
-        T const b_row_size = b.rows();
+       // T const b_row_size = b.rows();
         T const b_col_size = b.cols();
 
 
@@ -481,7 +481,7 @@ namespace anpi
 
 
 
-        assert((a.cols()==v1.size()));
+        //assert((a.cols()==v1.size()));
 
         T const a_row_size = a.rows();
         T const a_col_size = a.cols();
