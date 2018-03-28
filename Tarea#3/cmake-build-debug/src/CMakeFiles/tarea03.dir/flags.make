@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wno-long-long -pedantic -march=native -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/nabetse28/Documentos/ANPI-TEC/Tarea\#3/code/include" 
+CXX_INCLUDES = -I"/home/nabetse28/Documentos/ANPI-TEC/Tarea\#3/include" -I/usr/local/include 
 

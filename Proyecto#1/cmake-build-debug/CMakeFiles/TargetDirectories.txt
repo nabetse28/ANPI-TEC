@@ -1,0 +1,3 @@
+/home/nabetse28/Documentos/ANPI-TEC/Proyecto1_ANPI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Proyecto1_ANPI/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Proyecto1_ANPI/cmake-build-debug/CMakeFiles/Proyecto1_ANPI.dir

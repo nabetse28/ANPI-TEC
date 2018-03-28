@@ -1,0 +1,21 @@
+Instituto Tecnológico de Costa Rica
+Área de Ingenierı́a en Computadores
+Profesor: Dr. Pablo Alvarado Moya
+CE-3102 Análisis Numérico para Ingenierı́a
+I Semestre 2018
+
+Proyecto 1
+Ronny Quesada Arias - 2015061978
+Esteban Herrera Vargas - XXXXXXXXXX
+21 de marzo de 2018
+
+Implementar y evaluar algoritmos para búsqueda de raı́ces de polinomios, capaces de encontrar todas las raı́ces reales y complejas de un polinomio. Para poder ejecutar el programa se debe tener la bilbioteca boost 1.61.0 para poder ejecutar el programa.
+
+
+Pasos para ejecutar el programa desarrollado:
+1)Instalar libreria boos 1_61_0
+2) Descomprimir el archivo Proyecto1_ANPI.zip
+3) Utilizando la terminal acceder a la carpeta Proyecto1_ANPI en donde se encuentre el archivo main.cpp , se recomienda usar comando cd /directorio donde se encuentra el archivo/
+4) Compilar el archivo main.cpp con la instruccion: g++ -std=c++11 main.cpp -o main
+5) Ejecutar: ./main
+

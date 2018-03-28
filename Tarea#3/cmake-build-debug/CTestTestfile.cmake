@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code
-# Build directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug
+# Source directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3
+# Build directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

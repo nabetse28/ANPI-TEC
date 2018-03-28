@@ -48,10 +48,10 @@ RM = /opt/clion-2017.3.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code"
+CMAKE_SOURCE_DIR = "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,14 +91,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles" "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/CMakeFiles/progress.marks"
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles" 0
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/CMakeFiles" "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/src/CMakeFiles/progress.marks"
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,22 +108,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/tarea03.dir/rule:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/tarea03.dir/rule
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/tarea03.dir/rule
 .PHONY : src/CMakeFiles/tarea03.dir/rule
 
 # Convenience name for target.
@@ -133,12 +133,12 @@ tarea03: src/CMakeFiles/tarea03.dir/rule
 
 # fast build rule for target.
 tarea03/fast:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/build
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/build
 .PHONY : tarea03/fast
 
 # Convenience name for target.
 src/CMakeFiles/anpi.dir/rule:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/anpi.dir/rule
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/anpi.dir/rule
 .PHONY : src/CMakeFiles/anpi.dir/rule
 
 # Convenience name for target.
@@ -148,7 +148,7 @@ anpi: src/CMakeFiles/anpi.dir/rule
 
 # fast build rule for target.
 anpi/fast:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/build
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/build
 .PHONY : anpi/fast
 
 main.o: main.cpp.o
@@ -157,8 +157,8 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.o
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.o
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.o
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -167,8 +167,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.i
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.i
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.i
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -177,8 +177,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.s
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.s
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/tarea03.dir/build.make src/CMakeFiles/tarea03.dir/main.cpp.s
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -206,6 +206,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

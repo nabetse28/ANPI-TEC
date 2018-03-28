@@ -1,13 +1,13 @@
 Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
-Change Dir: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f3267/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f3267.dir/build.make CMakeFiles/cmTC_f3267.dir/build
-make[1]: se entra en el directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: *** No hay ninguna regla para construir el objetivo '/home/nabetse28/Documentos/ANPI-TEC/Tarea', necesario para 'CMakeFiles/cmTC_f3267.dir/feature_tests.cxx.o'.  Alto.
-make[1]: se sale del directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_f3267/fast'
-make: *** [cmTC_f3267/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_6b191/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b191.dir/build.make CMakeFiles/cmTC_6b191.dir/build
+make[1]: se entra en el directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/CMakeFiles/CMakeTmp'
+make[1]: *** No hay ninguna regla para construir el objetivo '/home/nabetse28/Documentos/ANPI-TEC/Tarea', necesario para 'CMakeFiles/cmTC_6b191.dir/feature_tests.cxx.o'.  Alto.
+make[1]: se sale del directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_6b191/fast'
+make: *** [cmTC_6b191/fast] Error 2
 
 
 

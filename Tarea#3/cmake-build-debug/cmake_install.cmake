@@ -1,4 +1,4 @@
-# Install script for directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code
+# Install script for directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/src/cmake_install.cmake")
-  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/test/cmake_install.cmake")
-  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/benchmarks/cmake_install.cmake")
+  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/src/cmake_install.cmake")
+  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/test/cmake_install.cmake")
+  include("/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/benchmarks/cmake_install.cmake")
 
 endif()
 
@@ -48,5 +48,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nabetse28/Documentos/ANPI-TEC/Tarea#3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,4 +1,4 @@
-# Install script for directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/code/src
+# Install script for directory: /home/nabetse28/Documentos/ANPI-TEC/Tarea#3/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
