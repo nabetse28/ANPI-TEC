@@ -314,6 +314,8 @@ namespace anpi
         /// Subtract another matrix to this one, and leave the result in here
         Matrix& operator-=(const Matrix& other);
 
+
+
         //@}
 
     private:
