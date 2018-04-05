@@ -7,9 +7,12 @@ src/CMakeFiles/anpi.dir/main.cpp.o
  ../include/Exception.hpp
  ../include/HasType.hpp
  ../include/Intrinsics.hpp
+ ../include/LUCrout.hpp
  ../include/LUDoolittle.hpp
  ../include/Matrix.hpp
  ../include/Matrix.tpp
+ ../include/QR.cpp
+ ../include/QR.hpp
  ../include/bits/MatrixArithmetic.hpp
  /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/src/main.cpp
  /usr/local/include/boost/align/align.hpp

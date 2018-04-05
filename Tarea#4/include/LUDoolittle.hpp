@@ -22,13 +22,27 @@
 namespace anpi {
 
 
+    /**
+     * It fills the vector with 0...n where n is the number of
+     * columns in the matrix.
+     *
+     * @param[in] Vector
+     * @param[in] n (columns number)
+     *
+     */
     void fillVector(std::vector<size_t>& v, size_t n){
         for(size_t i=0;i<n; i++){
             v[i] = i;
         }
     }
 
-    void prsize_tVectorDoolittle(std::vector<size_t>& v){
+    /**
+     * It prints the vector like a vector in console.
+     *
+     * @param[in] Vector
+     *
+     */
+    void printVectorDoolittle(std::vector<size_t>& v){
         string prsize_t = "Vector: ";
         size_t const v_size = v.size();
         for(size_t i=0;i<v_size;i++){
@@ -46,7 +60,14 @@ namespace anpi {
 
     }
 
-
+    /**
+     * It checks if the number a is in the vector
+     *
+     * @param[in] Vector
+     * @param[in] a (number)
+     * @param[out] return a bool (false or true)
+     *
+     */
     template <typename T>
     bool checkPermut(T a,std::vector<T>& v){
         bool res = false;
@@ -59,12 +80,12 @@ namespace anpi {
     }
 
     /**
-     * Prsize_ts the Matrix A like a matrix
+     * Prints the Matrix A like a matrix in console.
      *
      * @param[in] A a square matrix
      */
     template <typename T>
-    void prsize_tMatrixDoolittle(const anpi::Matrix<T>& A){
+    void printMatrixDoolittle(const anpi::Matrix<T>& A){
 
         size_t const Acols = A.cols();
         size_t const Arows = A.rows();
@@ -111,46 +132,49 @@ namespace anpi {
         anpi::Matrix<T> newA = LU;
 
 
-        /*
+/*
         cout<<"Esta es la matriz LU: "<<endl;
-        prrintMatrixDoolittle(newA);
-        */
+        printMatrixDoolittle(newA);
+*/
+
+        // Se compara si es una matriz cuadrada.
         if(Acols!=Arows){
             throw anpi::Exception("No es una matriz rectangular");
         }
 
+        // Se inicializan las matrices L y U con la cantidad de
+        // filas y columnas de LU.
         L.allocate(newA.rows(),newA.cols());
         U.allocate(newA.rows(),newA.cols());
 
-
+        // Se realiza el desempaquetamiento de la matriz LU.
         for(size_t k=0;k<Acols;k++){
             for(size_t r=0;r<Arows;r++){
                 if(k==r){
                     L[k][r] = T(1);
+                    U[k][r] = newA[k][r];
                 }else if(k<r){
-                    T factor = ((newA[r][k])/(newA[k][k]));
+                    T factor = newA[r][k]/*((newA[r][k])/(newA[k][k]))*/;
                     L[r][k] = factor;
-                    for(size_t c=0;c<Arows;c++){
+                    U[k][r] = newA[k][r];
+                    /*for(size_t c=0;c<Arows;c++){
                         newA[r][c] = ((newA[r][c])-((factor)*(newA[k][c])));
                         U = newA;
-                    }
+                    }*/
                 }
             }
         }
 
-        /*
+/*
         cout<<"Esta es la matriz L: "<<endl;
-        prrintMatrixDoolittle(L);
+        printMatrixDoolittle(L);
         cout<<"Esta es la matriz U: "<<endl;
-        prrintMatrixDoolittle(U);
+        printMatrixDoolittle(U);
         anpi::Matrix<T> LU1 = L * U;
         cout<<"Esta es la matriz LU multiplicada"<<endl;
-        prrintMatrixDoolittle(LU1);
-        */
+        printMatrixDoolittle(LU1);
+*/
 
-
-
-        //throw anpi::Exception();
     }
 
     /**
@@ -177,9 +201,7 @@ namespace anpi {
                      Matrix<T>& LU,
                      std::vector<size_t>& permut) {
 
-
-
-
+        // Se asignan variables para trabajar la funcion.
         anpi::Matrix<T> L;
         anpi::Matrix<T> U;
         anpi::Matrix<T> newA;
@@ -188,28 +210,32 @@ namespace anpi {
 
         newA = A;
 
-
+        // Se inicializan las matrices con la cantidad correspondiente de
+        // filas y columnas de A.
         L.allocate(A.rows(),A.cols());
         U.allocate(A.rows(),A.cols());
-        //LU.allocate(A.rows(),A.cols());
+        LU.allocate(A.rows(),A.cols());
         newA.allocate(A.rows(),A.cols());
 
         size_t const Acols = A.cols();
         size_t const Arows = A.rows();
 
+        // Se compara si es una matriz cuadrada.
         if((newA.rows()!=newA.cols())){
             throw anpi::Exception("No es una matriz rectangular");
         }
 
+        // Se rellena el vector con la funcion fill.
         fillVector(v1,Acols);
 
-        /*
+/*
         cout<<"Esta es la matriz A ingresada: "<<endl;
-        prrintMatrixDoolittle(newA);
-        */
+        printMatrixDoolittle(newA);
 
+*/
 
-        //Se ordena la matriz conforme el pivoteo
+        // Se ordena la matriz conforme el pivoteo, donde se pone el mayor de cada
+        // columna de primero hasta ordenarla.
         for(size_t i= 0; i<Acols;i++){
             size_t pos = T(0);
             T colm = newA[i][i];
@@ -232,49 +258,61 @@ namespace anpi {
                 }
             }
 
-            //prrintMatrixDoolittle(newA);
+            //printMatrixDoolittle(newA);
         }
 
 
+        // Se le asignan los valores obtenidos al vector permut.
         permut = v1;
 
 
+        // Se realiza la funcion de Doolittle
         for(size_t k=0;k<Acols;k++){
             for(size_t r=0;r<Arows;r++){
                 if(k==r){
                     L[k][r] = T(1);
                 }else if(k<r){
-                    T factor = ((newA[r][k])/(newA[k][k]));
+                    T factor = ((newA[r][k])/(newA[k][k])); // Se saca el factor y se agrega a la Matriz L.
                     L[r][k] = factor;
                     for(size_t c=0;c<Arows;c++){
-                        newA[r][c] = ((newA[r][c])-((factor)*(newA[k][c])));
-                        U = newA;
+                        newA[r][c] = ((newA[r][c])-((factor)*(newA[k][c]))); // Se obtiene el resultado de la multiplicacion del factor * los datos de la fila correspondiente.
+
                     }
                 }
             }
         }
 
-        LU = L * U;
 
 
+        // Se le asigna a LU su valor real.
+        for(int i=0;i<Acols;i++){
+            for(int j=0;j<Arows;j++){
+                if(i==j){
+                    LU[i][j] = newA[i][j];
+                }else{
+                    LU[i][j] = newA[i][j] + L[i][j];
+                }
+
+            }
+        }
+        //LU = L + U;
+
+        // Se compara LU con A a ver si tienen la misma cantidad de filas y columnas.
         if((LU.cols()!=newA.cols())||(LU.rows()!=newA.rows())){
             throw anpi::Exception("La matriz LU no coincide con A");
         }
 
 
-        /*
+/*
         cout<<"Esta es la matriz L: "<<endl;
-        prrintMatrixDoolittle(L);
+        printMatrixDoolittle(L);
         cout<<"Esta es la matriz U: "<<endl;
-        prrintMatrixDoolittle(U);
+        printMatrixDoolittle(newA);
         cout<<"Esta es la matriz LU con su respectivo vector de permutacion: "<<endl;
-        prrintMatrixDoolittle(LU);
-        prrintMatrixDoolittle(v1);
-        */
+        printMatrixDoolittle(LU);
+        printVectorDoolittle(v1);
+*/
 
-
-
-        //throw anpi::Exception();
     }
 
 }

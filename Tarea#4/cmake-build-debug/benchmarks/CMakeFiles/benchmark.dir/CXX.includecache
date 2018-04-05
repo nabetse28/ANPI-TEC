@@ -14,10 +14,6 @@ HasType.hpp
 
 ../include/AnpiConfig.hpp
 
-../include/Exception.hpp
-exception
--
-
 ../include/HasType.hpp
 
 ../include/Intrinsics.hpp
@@ -121,6 +117,42 @@ Matrix.hpp
 /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/benchmarks/Matrix.hpp
 Allocator.hpp
 /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/benchmarks/Allocator.hpp
+../include/LUDoolittle.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUDoolittle.hpp
+../include/LUCrout.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUCrout.hpp
+
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Exception.hpp
+exception
+-
+
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUCrout.hpp
+cmath
+-
+limits
+-
+functional
+-
+iostream
+-
+Exception.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Exception.hpp
+Matrix.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Matrix.hpp
+
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUDoolittle.hpp
+cmath
+-
+limits
+-
+functional
+-
+algorithm
+-
+Exception.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Exception.hpp
+Matrix.hpp
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Matrix.hpp
 
 /usr/local/include/boost/align/align.hpp
 boost/config.hpp

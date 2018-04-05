@@ -778,7 +778,6 @@ benchmarks/CMakeFiles/benchmark.dir/benchmarkMain.cpp.o
 benchmarks/CMakeFiles/benchmark.dir/benchmarkMatrixAdd.cpp.o
  ../include/Allocator.hpp
  ../include/AnpiConfig.hpp
- ../include/Exception.hpp
  ../include/HasType.hpp
  ../include/Intrinsics.hpp
  ../include/Matrix.hpp
@@ -788,6 +787,9 @@ benchmarks/CMakeFiles/benchmark.dir/benchmarkMatrixAdd.cpp.o
  ../include/bits/MatrixArithmetic.hpp
  /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/benchmarks/benchmarkFramework.hpp
  /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/benchmarks/benchmarkMatrixAdd.cpp
+ /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/Exception.hpp
+ /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUCrout.hpp
+ /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/include/LUDoolittle.hpp
  /usr/local/include/boost/align/align.hpp
  /usr/local/include/boost/align/aligned_alloc.hpp
  /usr/local/include/boost/align/aligned_allocator.hpp

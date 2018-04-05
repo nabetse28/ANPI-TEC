@@ -445,29 +445,29 @@ namespace anpi
 
 
 
-        if(a.cols()==b.rows()){
-            c.allocate(a.rows(),b.cols());
-            c.fill(T(0));
-
-
-
-
-            for(int i = 0; i<a_row_size;i++){
-                for(int j = 0; j< b_col_size;j++){
-                    for(int k = 0; k<a_col_size;k++){
-                        /*cout<< a[i][k] << endl;
-                        cout<< b[k][j] << endl;*/
-                        c[i][j]+= a[i][k] * b[k][j];
-
-                    }
-                    //cout<<c[i][j]<<endl;
-                }
-            }
-
-            return c;
-
+        if(a.cols()!=b.rows()){
+            throw anpi::Exception("No cumple, las columnas de A y las filas de B no son iguales o biceversa");
         }
 
+        c.allocate(a.rows(),b.cols());
+        c.fill(T(0));
+
+
+
+
+        for(int i = 0; i<a_row_size;i++){
+            for(int j = 0; j< b_col_size;j++){
+                for(int k = 0; k<a_col_size;k++){
+                    /*cout<< a[i][k] << endl;
+                    cout<< b[k][j] << endl;*/
+                    c[i][j]+= a[i][k] * b[k][j];
+
+                }
+                //cout<<c[i][j]<<endl;
+            }
+        }
+
+        return c;
 
         throw anpi::Exception("No cumple, las columnas de A y las filas de B no son iguales o biceversa");
 

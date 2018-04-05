@@ -1,0 +1,16 @@
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/src/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/src/CMakeFiles/anpi.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/src/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/src/CMakeFiles/tarea03.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/src/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/test/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/test/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/test/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/test/CMakeFiles/tester.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/benchmarks/CMakeFiles/test.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/benchmarks/CMakeFiles/rebuild_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/benchmarks/CMakeFiles/edit_cache.dir
+/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/benchmarks/CMakeFiles/benchmark.dir

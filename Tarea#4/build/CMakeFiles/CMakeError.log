@@ -1,0 +1,13 @@
+Detecting CXX [-std=c++14] compiler features failed to compile with the following output:
+Change Dir: /home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bda04/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bda04.dir/build.make CMakeFiles/cmTC_bda04.dir/build
+make[1]: se entra en el directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/CMakeTmp'
+make[1]: *** No hay ninguna regla para construir el objetivo '/home/nabetse28/Documentos/ANPI-TEC/Tarea', necesario para 'CMakeFiles/cmTC_bda04.dir/feature_tests.cxx.o'.  Alto.
+make[1]: se sale del directorio '/home/nabetse28/Documentos/ANPI-TEC/Tarea#4/build/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_bda04/fast'
+make: *** [cmTC_bda04/fast] Error 2
+
+
+

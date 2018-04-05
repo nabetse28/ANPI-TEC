@@ -6,9 +6,12 @@ src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/AnpiConfig.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/Exception.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/HasType.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/Intrinsics.hpp
+src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/LUCrout.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/LUDoolittle.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/Matrix.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/Matrix.tpp
+src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/QR.cpp
+src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/QR.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../include/bits/MatrixArithmetic.hpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/tarea03.dir/main.cpp.o: /usr/local/include/boost/align/align.hpp

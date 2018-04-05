@@ -1,0 +1,69 @@
+Instituto Tecnológico de Costa Rica 
+Área de Ingeniería en Computadores 
+Profesor: Dr. Pablo Alvarado Moya 
+CE-3102 Análisis Numérico para Ingeniería 
+I Semestre 2018 
+
+
+Tarea 4
+Ronny Quesada Arias     -  2015061978 
+Esteban Herrera Vargas  -  2015012410 
+Pablo Bustamante Mora   -  2014078559
+4 de abril de 2018 
+
+Implementar la descomposición LU de una matrix con los métodos de Doolittle y de Crout. Ademas Implementar el método de descomposición QR de una matrix.
+
+
+1. Pasos para ejecutar el programa desarrollado: 
+
+1.1)Instalar la librería boos 1_65_0 
+
+1.2) Descomprimir el archivo tarea4_ronny_esteban_pablo.zip 
+
+
+2. Se necesitara tener el siguiente programa instalado:
+2.1) Biblioteca matplotlib
+
+>>> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+>>> sudo python get-pip.py
+>>> sudo pip install matplotlib
+
+2.2) Biblioteca Tkinter
+
+>>> sudo apt-get install python-tk
+
+~Siguiendo con la ejecucion del documento:
+1.3) Ahora despues de ejecutar esos comandos en la terminal se debera crear un directorio desde el proyecto "tarea4_ronny_esteban_pablo"
+
+>>> mkdir build
+
+1.4) Entrar en esta carpeta y ejecutar el comando siguiente:
+
+>>> cd build
+>>> cmake ../ -DCMAKE_BUILD_TYPE=Debug
+
+1.5) Ahora se compilara el proyecto
+
+>>> make
+
+
+##########    TESTS    ##########
+
+1.6) Ejecucion del main
+
+>>> src/tarea03
+
+1.7) Ejecucion de pruebas unitarias
+
+>>> test/tester
+
+
+1.7) Ejecucion de Benchmarks
+
+>>> benchmarks/benchmark
+
+
+
+
+
+
